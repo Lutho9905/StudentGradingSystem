@@ -34,11 +34,11 @@ class Grader {
     }
 }
 
-// Extended class for a specific type of grader (if needed)
+
 class AdvancedGrader extends Grader {
     @Override
     public String evaluate(int mark) throws IllegalArgumentException {
-        // You can add additional grading logic here if needed
+        //here I wanted to more grading e.g if a student gets >85 it returns A+, so on.
         return super.evaluate(mark);
     }
 }
@@ -53,7 +53,7 @@ public class GradingSystem {
 
         student[] students = new student[numberOfStudents];
         
-        // Input student names and marks
+ 
         for (int i = 0; i < numberOfStudents; i++) {
             System.out.print("Enter name of student " + (i + 1) + ": ");
             String name = input.nextLine();
@@ -67,7 +67,7 @@ public class GradingSystem {
 
         Grader grader = new AdvancedGrader(); // Using polymorphism
         
-        // Evaluate each student's mark
+   
         for (student student : students) {
             try {
                 String result = grader.evaluate(student.getMark());
