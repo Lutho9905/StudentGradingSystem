@@ -16,7 +16,7 @@ class student {
             return mark;
         }
 }
-// Base class for grading
+
 class Grader {
     public String evaluate(int mark) throws IllegalArgumentException {
         if (mark < 0 || mark > 100) {
@@ -43,7 +43,7 @@ class AdvancedGrader extends Grader {
     }
 }
 
-// Main class to handle user input and exceptions
+
 public class GradingSystem {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -79,6 +79,6 @@ public class GradingSystem {
             }
         }
 
-        input.close(); // Ensure the scanner is closed
+        input.close(); 
     }
 }
